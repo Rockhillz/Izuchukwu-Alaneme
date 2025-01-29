@@ -1,14 +1,12 @@
 import React, { useState } from "react";
-import { Container, Row, Col, Form, Button } from "react-bootstrap";
+import { Container, Row, Col, Form, Button, Spinner } from "react-bootstrap";
 import {
   FaEnvelope,
   FaPhone,
   FaMapMarkerAlt,
   FaLinkedin,
   FaGithub,
-  FaRegEnvelope,
 } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
 
 const Contact = () => {
   // State for form inputs
@@ -19,6 +17,9 @@ const Contact = () => {
     message: "",
   });
 
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(null);
+
   // Handle input changes
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -27,12 +28,39 @@ const Contact = () => {
   // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Form Data:", formData);
-    // Here, you can integrate with an API or email service
+    
+    // Set loading and success states
+    setLoading(true);
+    setSuccess(null);
+
+    // Send the form data to the backend via a POST request
+    fetch(`https://izuemailserver.onrender.com/api/send-email`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData), // Send the form data to your backend
+    })
+      .then((response) => response.json()) // Parse the JSON response from your backend
+      .then((data) => {
+        if (data.success) {
+          setSuccess("Message sent successfully!");
+          setFormData({ name: "", email: "", subject: "", message: "" }); // Clear the form
+        } else {
+          setSuccess("Failed to send message. Try again later.");
+        }
+      })
+      .catch((error) => {
+        console.error("Error:", error); // Log any errors
+        setSuccess("Failed to send message. Try again later.");
+      })
+      .finally(() => {
+        setLoading(false); // Reset loading state after API call
+      });
   };
 
   return (
-    <Container className="py-5" id="Contact">
+    <Container className="py-5" id="contact">
       <h2 className="text-center mb-4 fw-bold">Contact</h2>
       <Row className="justify-content-center">
         {/* Left: Contact Information */}
@@ -66,21 +94,12 @@ const Contact = () => {
             >
               <FaGithub size={28} className="text-dark" />
             </a>
-            {/* <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-              <FaXTwitter size={28} className="text-info" />
-            </a> */}
-            {/* <a href="mailto:izuchukwualaneme@gmail.com" target="_blank">
-              <FaRegEnvelope size={28} className="text-danger" />
-            </a> */}
           </div>
         </Col>
 
         {/* Right: Contact Form */}
         <Col md={6}>
-          <Form
-            onSubmit={handleSubmit}
-            className="p-4 shadow-lg rounded-4 bg-light"
-          >
+          <Form onSubmit={handleSubmit} className="p-4 shadow-lg rounded-4 bg-light">
             <Form.Group className="mb-3">
               <Form.Control
                 type="text"
@@ -126,9 +145,27 @@ const Contact = () => {
               />
             </Form.Group>
 
-            <Button variant="primary" type="submit" className="w-100">
-              Send Message
+            <Button 
+              variant="primary" 
+              type="submit" 
+              className="w-100" 
+              disabled={loading} // Disable button while loading
+            >
+              {loading ? (
+                <Spinner as="span" animation="border" size="sm" role="status" aria-hidden="true" />
+              ) : (
+                "Send Message"
+              )}
+              {loading && " Sending..."} {/* Text will change when loading */}
             </Button>
+
+            {success && (
+              <p
+                className={`mt-3 text-center ${success.includes("successfully") ? "text-success" : "text-danger"}`}
+              >
+                {success}
+              </p>
+            )}
           </Form>
         </Col>
       </Row>
