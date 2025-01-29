@@ -2,10 +2,10 @@ import React from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import { FaDownload, FaLinkedin, FaGithub } from "react-icons/fa";
 
-const AboutMe = () => {
+const AboutMe = ({ scrollToSection, projectsRef, contactRef }) => {
   return (
     <section
-      id="about" // Ensure the ID matches the link in your navbar
+      id="about"
       style={{
         background: "black",
         color: "white",
@@ -17,7 +17,6 @@ const AboutMe = () => {
         overflow: "hidden",
         marginBottom: "3rem", // Added margin at the bottom for more space
         paddingTop: "70px", // Adjust this value based on navbar height
-
       }}
     >
       <Container>
@@ -33,37 +32,52 @@ const AboutMe = () => {
               in modern web technologies such as JavaScript, React, Node.js,
               Express, and MongoDB. I love building scalable, responsive, and
               user-friendly applications. Whether it's creating sleek user
-              interfaces or robust backends, I bring ideas to life with code.. 
+              interfaces or robust backends, I bring ideas to life with code..
               Let's create something amazing together!
             </p>
             <div className="d-flex flex-column flex-md-row mb-2">
               <Button
-                href="#projects"
+                onClick={() => scrollToSection(projectsRef)} // Scroll to projects section
                 variant="light"
                 style={{
                   backgroundColor: "white",
                   border: "none",
                   color: "black",
                   fontWeight: "bold",
-                  marginBottom: "1rem", // Added space between buttons on mobile
+                  marginBottom: "1rem",
                   marginRight: "1rem",
                 }}
-                className="w-100 w-md-auto mb-2" // Full width on mobile, auto on desktop
+                className="w-100 w-md-auto mb-2"
               >
                 View My Work
               </Button>
 
               <Button
-                href="#contact"
+                onClick={() => scrollToSection(contactRef)} // Scroll to contact section
                 variant="outline-light"
                 style={{
                   fontWeight: "bold",
-                  marginBottom: "1rem", // Added space between buttons on mobile
+                  marginBottom: "1rem",
                   marginRight: "1rem",
                 }}
-                className="w-100 w-md-auto mb-2" // Full width on mobile, auto on desktop
+                className="w-100 w-md-auto mb-2"
               >
                 Contact Me
+              </Button>
+
+              {/* Download CV Button */}
+              <Button
+                href="https://drive.google.com/file/d/1QtbTllMAQRkqqwR73ZV4_GtAHMozXIZV/view?usp=drive_link"
+                target="_blank"
+                variant="outline-light"
+                style={{
+                  fontWeight: "bold",
+                  marginBottom: "1rem",
+                }}
+                className="w-100 w-md-auto mb-2"
+              >
+                <FaDownload size={18} className="me-2" />
+                Download CV
               </Button>
             </div>
 

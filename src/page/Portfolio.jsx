@@ -32,7 +32,11 @@ const Portfolio = () => {
       />
 
       <div ref={aboutRef}>
-        <AboutMe />
+        <AboutMe 
+        scrollToSection={scrollToSection} // Pass scroll function
+        projectsRef={projectsRef} // Pass projectsRef
+        contactRef={contactRef} // Pass contactRef
+        />
       </div>
       <div ref={projectsRef}>
         <Project />

@@ -5,7 +5,7 @@ const NavBar = ({ scrollToSection, aboutRef, projectsRef, skillsRef, contactRef 
   return (
     <Navbar bg="dark" variant="dark" expand="lg" fixed="top">
       <Container>
-        <Navbar.Brand href="#">izuChi</Navbar.Brand>
+        <Navbar.Brand href="#">IzUcHi</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
