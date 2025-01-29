@@ -1,35 +1,23 @@
-import React from 'react';
-import { Navbar, Nav, Container } from 'react-bootstrap';
+import React from "react";
+import { Navbar, Nav, Container } from "react-bootstrap";
 
-function NavBar() {
-  const styles = {
-    navHead: {
-      backgroundColor: 'BE564A !important',
-      color: 'white',
-      
-    },
-  };
-
+const NavBar = ({ scrollToSection, aboutRef, projectsRef, skillsRef, contactRef }) => {
   return (
-    <Navbar bg="dark" variant="dark" expand="lg" fixed="top" className="mb">
+    <Navbar bg="dark" variant="dark" expand="lg" fixed="top">
       <Container>
-        {/* Brand Name */}
-        <Navbar.Brand href="#home" style={styles.navHead}>
-          izuChi
-        </Navbar.Brand>
+        <Navbar.Brand href="#">izuChi</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            {/* Hash-based scrolling links */}
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#projects">Projects</Nav.Link>
-            <Nav.Link href="#skills">Skills</Nav.Link>
-            <Nav.Link href="#contact">Contact</Nav.Link>
+            <Nav.Link onClick={() => scrollToSection(aboutRef)}>About</Nav.Link>
+            <Nav.Link onClick={() => scrollToSection(projectsRef)}>Projects</Nav.Link>
+            <Nav.Link onClick={() => scrollToSection(skillsRef)}>Skills</Nav.Link>
+            <Nav.Link onClick={() => scrollToSection(contactRef)}>Contact</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
     </Navbar>
   );
-}
+};
 
 export default NavBar;

@@ -1,12 +1,12 @@
 import { Routes, Route } from "react-router-dom";
 import Footer from "./components/Footer";
-import NavBar from "./components/NavBar";
+// import NavBar from "./components/NavBar";
 import Portfolio from "./page/Portfolio";
 
 function App() {
   return (
     <>
-      <NavBar />
+      {/* <NavBar /> */}
 
       <Routes>
         <Route path="/" element={<Portfolio />} />

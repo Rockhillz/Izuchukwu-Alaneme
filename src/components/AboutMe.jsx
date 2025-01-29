@@ -13,9 +13,11 @@ const AboutMe = () => {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        width: "100vw",
+        width: "100%",
         overflow: "hidden",
         marginBottom: "3rem", // Added margin at the bottom for more space
+        paddingTop: "70px", // Adjust this value based on navbar height
+
       }}
     >
       <Container>
