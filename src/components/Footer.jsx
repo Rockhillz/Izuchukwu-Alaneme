@@ -143,9 +143,9 @@ const Footer = () => {
 
           {/* Copyright Notice */}
           <Col xs={12} md={4} className="text-center text-md-end">
-            <h5>izuChi</h5>
+            <h5>IzUcHi</h5>
             <p className="mb-0">
-              &copy; {new Date().getFullYear()} izuChi. All rights
+              &copy; {new Date().getFullYear()} IzUcHi. All rights
               reserved.
             </p>
           </Col>
