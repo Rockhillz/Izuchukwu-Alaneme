@@ -34,7 +34,7 @@ const Contact = () => {
     setSuccess(null);
 
     // Send the form data to the backend via a POST request
-    fetch(`http://localhost:5000/api/send-email`, {
+    fetch(`https://izuemailserver.onrender.com/api/send-email`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
