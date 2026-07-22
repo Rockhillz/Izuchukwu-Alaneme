@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alaneme Izuchukwu — Backend Software Engineer</title>
+    <meta name="description"
+        content="Backend Software Engineer specialising in fintech payment infrastructure, distributed systems, and open-source developer tooling.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<button id="backToTop" class="back-to-top" aria-label="Back to top">
+    <span>↑ top</span>
+</button>
+
+<body>
+
+    <div class="grid-overlay" aria-hidden="true"></div>
+
+    <header class="site-header">
+        <a href="#top" class="brand">A.IZUCHUKWU<span class="brand-dot">_</span></a>
+        <nav class="main-nav">
+            <a href="#about">about</a>
+            <a href="#experience">experience</a>
+            <a href="#projects">projects</a>
+            <a href="#stack">stack</a>
+            <a href="#education">education</a>
+            <a href="https://dev.to/rockhillz" target="_blank" rel="noopener">blog</a>
+            <a href="#contact" class="nav-cta">contact</a>
+        </nav>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
+
+    <main id="top">
+
+        <!-- ============ HERO ============ -->
+        <section class="hero" id="hero">
+            <div class="hero-inner">
+                <div class="hero-copy">
+                    <p class="eyebrow"><span class="dot dot-live"></span>system status: online — lagos, nigeria</p>
+                    <h1>I build the backend that moves money without anyone noticing it moved.</h1>
+                    <p class="hero-lede">
+                        Backend Software Engineer at <strong>Monirates</strong>, working on cross-border FX payment
+                        infrastructure and wallet systems that clear 1,000+ transactions a day. I care about the
+                        unglamorous parts &mdash; reconciliation, retries, idempotency, onboarding docs &mdash;
+                        because that's where fintech actually breaks.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="mailto:Izuchukwualaneme@gmail.com" class="btn btn-primary">Email me →</a>
+                        <a href="https://linkedin.com/in/izuchukwu-alaneme-ai" target="_blank" rel="noopener"
+                            class="btn btn-ghost">LinkedIn</a>
+                        <a href="https://github.com/Rockhillz" target="_blank" rel="noopener"
+                            class="btn btn-ghost">GitHub</a>
+                    </div>
+                </div>
+
+                <div class="hero-photo-wrap">
+                    <div class="photo-frame">
+                        <img src="assets/izuchukwu-alaneme.jpeg" alt="Alaneme Izuchukwu, side portrait"
+                            class="photo-real">
+                    </div>
+                </div>
+            </div>
+
+            <div class="metrics-strip">
+                <div class="metric">
+                    <span class="metric-value">1,000+</span>
+                    <span class="metric-label">daily transactions processed</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-value">12%</span>
+                    <span class="metric-label">drop in critical payment incidents</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-value">50%</span>
+                    <span class="metric-label">faster developer onboarding</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-value">80%</span>
+                    <span class="metric-label">faster service bootstrap via nodecore-kit</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ ABOUT ============ -->
+        <section class="section" id="about">
+            <div class="section-head">
+                <span class="section-index">01</span>
+                <h2>About</h2>
+            </div>
+            <div class="about-body">
+                <p>
+                    I'm a backend engineer with a little over a year of production experience, all of it spent inside
+                    fintech. At Monirates I work across two systems: a cross-border FX payment platform and a custodial
+                    multi-chain wallet backend &mdash; which means most of my days involve ledgers, reconciliation
+                    workflows, retries, and making sure a partner's money lands where it's supposed to, even when the
+                    network in between doesn't cooperate.
+                </p>
+                <p>
+                    Before that I trained through Gomycode's full-stack programme, and before <em>that</em> I spent
+                    over a year as a data entry officer &mdash; which, oddly, is where I first learned to care about
+                    data integrity and audit trails, long before I knew the word "reconciliation."
+                </p>
+                <p>
+                    Outside of feature work, I maintain <strong>nodecore-kit</strong>, an open-source Node.js toolkit
+                    I built to stop rewriting the same Redis clients and AWS helpers for every new service, and I act
+                    as the technical point of contact for external developers integrating our APIs.
+                </p>
+            </div>
+        </section>
+
+        <!-- ============ EXPERIENCE ============ -->
+        <section class="section" id="experience">
+            <div class="section-head">
+                <span class="section-index">02</span>
+                <h2>Experience</h2>
+            </div>
+
+            <div class="ledger">
+
+                <article class="ledger-entry">
+                    <div class="ledger-meta">
+                        <span class="ledger-id">LOG · 2025-04 → PRESENT</span>
+                        <span class="status status-active">ACTIVE</span>
+                    </div>
+                    <div class="ledger-body">
+                        <h3>Backend Software Engineer <span class="at">@ Monirates</span></h3>
+                        <ul>
+                            <li>Develop and maintain backend services for cross-border FX payment processing,
+                                contributing to a 12% reduction in critical payment workflow failures across pipelines
+                                handling 1,000+ daily transactions.</li>
+                            <li>Designed and shipped REST API integrations for external financial partners; authored API
+                                documentation that cut developer onboarding time by 50% and reduced integration support
+                                tickets by 62%.</li>
+                            <li>Investigated and resolved critical payment API failures in production, restoring
+                                real-time transaction reliability and preventing SLA breaches for financial partners.
+                            </li>
+                            <li>Built and maintain wallet infrastructure using MySQL for balances, ledgers, and
+                                reconciliation, alongside MongoDB for operational data.</li>
+                            <li>Built and published <strong>nodecore-kit</strong>, an open-source Node.js infrastructure
+                                library (Redis, AWS SQS/S3, JWT, JSON utilities) that cut new-service bootstrap time by
+                                80% and standardised setup across the engineering team.</li>
+                            <li>Acted as technical liaison for 50+ external developers integrating financial APIs,
+                                owning onboarding docs, integration support, and compliance communication.</li>
+                        </ul>
+                        <div class="tag-row">
+                            <span class="tag">Node.js</span><span class="tag">TypeScript</span><span
+                                class="tag">MySQL</span><span class="tag">MongoDB</span><span
+                                class="tag">AWS</span><span class="tag">Microservices</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="ledger-entry">
+                    <div class="ledger-meta">
+                        <span class="ledger-id">LOG · 2024-08 → 2025-03</span>
+                        <span class="status status-complete">COMPLETE</span>
+                    </div>
+                    <div class="ledger-body">
+                        <h3>Software Engineer Intern <span class="at">@ Gomycode</span></h3>
+                        <ul>
+                            <li>Built and deployed full-stack MERN applications to production, including a School
+                                Management System with attendance tracking, academic reporting, JWT auth, and role-based
+                                access control.</li>
+                            <li>Engineered RESTful APIs for an e-commerce platform covering product listings, cart
+                                management, and third-party payment and inventory integrations.</li>
+                            <li>Implemented JWT authentication and session management, achieving zero
+                                unauthorised-access incidents across all production deployments.</li>
+                            <li>Debugged and resolved backend defects, improving stability and reducing runtime errors
+                                by 15%.</li>
+                        </ul>
+                        <div class="tag-row">
+                            <span class="tag">React</span><span class="tag">Node.js</span><span
+                                class="tag">Express</span><span class="tag">MongoDB</span><span class="tag">JWT</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="ledger-entry">
+                    <div class="ledger-meta">
+                        <span class="ledger-id">LOG · 2022-05 → 2023-06</span>
+                        <span class="status status-complete">COMPLETE</span>
+                    </div>
+                    <div class="ledger-body">
+                        <h3>Data Entry Officer <span class="at">@ Fas Agro Ltd.</span></h3>
+                        <ul>
+                            <li>Maintained accurate enterprise data records across audited systems for 14 months with
+                                zero compliance violations.</li>
+                            <li>Applied encryption and access controls to protect sensitive commercial data.</li>
+                        </ul>
+                        <div class="tag-row">
+                            <span class="tag">Excel</span><span class="tag">Power BI</span>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- ============ PROJECTS ============ -->
+        <section class="section" id="projects">
+            <div class="section-head">
+                <span class="section-index">03</span>
+                <h2>Projects</h2>
+            </div>
+
+            <div class="project-grid">
+
+                <article class="project-card project-card-featured">
+                    <div class="project-top">
+                        <h3>nodecore-kit</h3>
+                        <span class="status status-active">PUBLISHED · NPM</span>
+                    </div>
+                    <p>An open-source backend utility toolkit &mdash; Redis client setup, AWS SQS/S3 helpers, JWT
+                        utilities, and safe JSON parsing. Built to kill repetitive infrastructure boilerplate and
+                        standardise how new Node.js services get bootstrapped.</p>
+                    <div class="tag-row">
+                        <span class="tag">Node.js</span><span class="tag">Redis</span><span class="tag">AWS</span><span
+                            class="tag">Open Source</span>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-top">
+                        <h3>Chizzy Kids Group of Schools</h3>
+                        <span class="status status-complete">LIVE</span>
+                    </div>
+                    <p>A full-stack school management platform for a private school group &mdash; student data,
+                        attendance tracking, academic reporting, and role-based access for admins and staff.</p>
+                    <div class="tag-row">
+                        <span class="tag">MERN</span><span class="tag">RBAC</span>
+                    </div>
+                    <a href="https://chizzykidsgroupofschools.com.ng" target="_blank" rel="noopener"
+                        class="project-link">chizzykidsgroupofschools.com.ng →</a>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-top">
+                        <h3>El-Matador Group</h3>
+                        <span class="status status-complete">LIVE</span>
+                    </div>
+                    <p>A solar energy company's client-facing platform for booking product demos and requesting quotes.
+                        Delivered end-to-end: UI, booking logic, backend API, and deployment. In active use by the
+                        client's sales team.</p>
+                    <div class="tag-row">
+                        <span class="tag">Node.js</span><span class="tag">Full-stack</span>
+                    </div>
+                    <a href="https://elmatadorgroup.com" target="_blank" rel="noopener"
+                        class="project-link">elmatadorgroup.com →</a>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-top">
+                        <h3>Essence of Style</h3>
+                        <span class="status status-complete">LIVE</span>
+                    </div>
+                    <p>Product catalogue, authentication, and shopping cart, with REST integrations to third-party
+                        payment and inventory services. Data models and API contracts built from scratch.</p>
+                    <div class="tag-row">
+                        <span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">MongoDB</span>
+                    </div>
+                    <a href="https://essence-of-style.onrender.com" target="_blank" rel="noopener"
+                        class="project-link">essence-of-style.onrender.com →</a>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- ============ STACK ============ -->
+        <section class="section" id="stack">
+            <div class="section-head">
+                <span class="section-index">04</span>
+                <h2>Stack</h2>
+            </div>
+
+            <div class="stack-grid">
+                <div class="stack-group">
+                    <h4>Languages</h4>
+                    <div class="tag-row"><span class="tag">JavaScript (ES6+)</span><span class="tag">TypeScript</span>
+                    </div>
+                </div>
+                <div class="stack-group">
+                    <h4>Backend</h4>
+                    <div class="tag-row"><span class="tag">Node.js</span><span class="tag">Express.js</span><span
+                            class="tag">REST API Design</span><span class="tag">Microservices</span><span
+                            class="tag">JWT Auth</span><span class="tag">RBAC</span><span class="tag">Event-Driven
+                            Architecture</span></div>
+                </div>
+                <div class="stack-group">
+                    <h4>Frontend</h4>
+                    <div class="tag-row"><span class="tag">React.js</span><span class="tag">Next.js</span><span
+                            class="tag">Tailwind CSS</span><span class="tag">Bootstrap</span></div>
+                </div>
+                <div class="stack-group">
+                    <h4>Databases</h4>
+                    <div class="tag-row"><span class="tag">MongoDB</span><span class="tag">MySQL</span><span
+                            class="tag">Redis</span></div>
+                </div>
+                <div class="stack-group">
+                    <h4>Cloud &amp; Infra</h4>
+                    <div class="tag-row"><span class="tag">AWS</span><span class="tag">Distributed Systems</span><span
+                            class="tag">Cloud Deployments</span></div>
+                </div>
+                <div class="stack-group">
+                    <h4>Tooling</h4>
+                    <div class="tag-row"><span class="tag">Git / GitHub</span><span class="tag">Postman</span><span
+                            class="tag">GitHub Actions</span><span class="tag">API Documentation</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ EDUCATION ============ -->
+        <section class="section" id="education">
+            <div class="section-head">
+                <span class="section-index">05</span>
+                <h2>Education</h2>
+            </div>
+
+            <div class="ledger">
+                <article class="ledger-entry ledger-entry-compact">
+                    <div class="ledger-meta">
+                        <span class="ledger-id">LOG · 2024</span>
+                        <span class="status status-complete">COMPLETE</span>
+                    </div>
+                    <div class="ledger-body">
+                        <h3>Diploma, Full Stack Software Development <span class="at">@ Gomycode</span></h3>
+                    </div>
+                </article>
+                <article class="ledger-entry ledger-entry-compact">
+                    <div class="ledger-meta">
+                        <span class="ledger-id">LOG · 2016 → 2021</span>
+                        <span class="status status-complete">COMPLETE</span>
+                    </div>
+                    <div class="ledger-body">
+                        <h3>HND, Biochemistry <span class="at">@ Institute of Management and Technology, Enugu</span>
+                        </h3>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ============ CONTACT ============ -->
+        <section class="section contact-section" id="contact">
+            <div class="section-head">
+                <span class="section-index">06</span>
+                <h2>Contact</h2>
+            </div>
+            <div class="contact-body">
+                <p>Open to backend and fintech engineering roles, integration work, and interesting distributed-systems
+                    problems.</p>
+                <div class="contact-links">
+                    <a href="mailto:Izuchukwualaneme@gmail.com" class="btn btn-primary">Izuchukwualaneme@gmail.com</a>
+                    <a href="tel:+2348130026073" class="btn btn-ghost">+234 813 002 6073</a>
+                    <a href="https://linkedin.com/in/izuchukwu-alaneme-ai" target="_blank" rel="noopener"
+                        class="btn btn-ghost">LinkedIn ↗</a>
+                    <a href="https://github.com/Rockhillz" target="_blank" rel="noopener"
+                            class="btn btn-ghost">GitHub ↗</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <span>© 2026 Alaneme Izuchukwu · Lagos, Nigeria</span>
+        <span class="footer-status"><span class="dot dot-live"></span>build: stable</span>
+    </footer>
+
+    <script>
+        // Mobile nav toggle
+        const navToggle = document.getElementById('navToggle');
+        const mainNav = document.querySelector('.main-nav');
+        navToggle.addEventListener('click', () => {
+            const open = mainNav.classList.toggle('open');
+            navToggle.setAttribute('aria-expanded', open);
+        });
+        document.querySelectorAll('.main-nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                mainNav.classList.remove('open');
+                navToggle.setAttribute('aria-expanded', false);
+            });
+        });
+
+        // Back to top button
+        const backToTop = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            backToTop.classList.toggle('visible', window.scrollY > window.innerHeight);
+        });
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+
+</body>
+
+</html>
