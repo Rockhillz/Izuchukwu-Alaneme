@@ -161,7 +161,7 @@ p { margin: 0; }
 /* ============================================
    LAYOUT HELPERS
 ============================================ */
-main, .site-header, .site-footer {
+main, .site-footer {
   position: relative;
   z-index: 1;
 }
